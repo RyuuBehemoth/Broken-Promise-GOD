@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=4 uid="uid://daakhmnu5fe6b"]
+
+[ext_resource type="Texture2D" uid="uid://dtaog3iiqxo4" path="res://tiles/TerrenosDelAbuelo.png" id="1_ove4f"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_id002"]
+texture = ExtResource("1_ove4f")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 9, 0, 17, 16, 9, 16, -9, 0, -17, -16, -9)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 9, 0, 17, 16, 9, 16, -9, 0, -17, -16, -9)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 9, 0, 17, 16, 9, 16, -9, 0, -17, -16, -9)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 9, 0, 17, 16, 9, 16, -9, 0, -17, -16, -9)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 9, 0, 17, 16, 9, 16, -9, 0, -17, -16, -9)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 9, 0, 17, 16, 9, 16, -9, 0, -17, -16, -9)
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o4cqm"]
+tile_shape = 1
+tile_layout = 1
+tile_size = Vector2i(32, 16)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_id002")
+
+[node name="Spawn" type="TileMapLayer"]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAACAAMAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAQAAAAAAAAAAAABAAUAAAAAAAAAAAABAAYAAAAAAAAAAAABAAcAAAAAAAAAAAABAAgAAAAAAAAAAAABAAkAAAAAAAAAAAABAAoAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAAAAAAAAAAACAAkAAAAAAAAAAAACAAoAAAAAAAAAAAACAAsAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAADAAUAAAAAAAAAAAADAAYAAAAAAAAAAAADAAcAAAAAAAAAAAADAAgAAAAAAAAAAAADAAkAAAAAAAAAAAADAAoAAAAAAAAAAAADAAsAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAYAAAAAAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAEAAkAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_o4cqm")
