@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1m3vtjg8a244"]
+
+[ext_resource type="PackedScene" uid="uid://dquj2flnn57ia" path="res://mapa/regiones/Spawn prueba.tscn" id="1_efmho"]
+[ext_resource type="PackedScene" uid="uid://cilmio32hl8vr" path="res://personajes/pelao_carbon.tscn" id="2_8a8md"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Spawn" parent="." instance=ExtResource("1_efmho")]
+position = Vector2(-17, 28)
+
+[node name="PelaoCarbon" parent="." instance=ExtResource("2_8a8md")]
+position = Vector2(346, 289)
+
+[node name="Camera2D" type="Camera2D" parent="PelaoCarbon"]
+position = Vector2(1, 8)
+zoom = Vector2(4.605, 4.605)

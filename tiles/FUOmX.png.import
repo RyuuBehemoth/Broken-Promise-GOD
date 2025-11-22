@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtaog3iiqxo4"
-path="res://.godot/imported/TerrenosDelAbuelo.png-4474c2bde2b348170f2f43b4cae5d989.ctex"
+uid="uid://br061e0sa8jyl"
+path="res://.godot/imported/FUOmX.png-822ebcc781e340e3d24d5370cf45e7dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/TerrenosDelAbuelo.png"
-dest_files=["res://.godot/imported/TerrenosDelAbuelo.png-4474c2bde2b348170f2f43b4cae5d989.ctex"]
+source_file="res://tiles/FUOmX.png"
+dest_files=["res://.godot/imported/FUOmX.png-822ebcc781e340e3d24d5370cf45e7dc.ctex"]
 
 [params]
 

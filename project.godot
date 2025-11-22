@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="BrokenPromise"
+run/main_scene="uid://d1m3vtjg8a244"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -25,3 +26,7 @@ version_control/autoload_on_startup=true
 2d_physics/layer_2="Daño"
 2d_physics/layer_3="Jugador"
 2d_physics/layer_4="Recolectar"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
