@@ -1,16 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1m3vtjg8a244"]
+[gd_scene load_steps=4 format=3 uid="uid://d1m3vtjg8a244"]
 
 [ext_resource type="PackedScene" uid="uid://dquj2flnn57ia" path="res://mapa/regiones/Spawn prueba.tscn" id="1_efmho"]
 [ext_resource type="PackedScene" uid="uid://cilmio32hl8vr" path="res://personajes/pelao_carbon.tscn" id="2_8a8md"]
+[ext_resource type="PackedScene" uid="uid://dk26vgs2m6dyd" path="res://personajes/npc/pelado_quieto_no_jugable.tscn" id="3_8a8md"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Spawn" parent="." instance=ExtResource("1_efmho")]
+show_behind_parent = false
+z_as_relative = false
 position = Vector2(-17, 28)
 
 [node name="PelaoCarbon" parent="." instance=ExtResource("2_8a8md")]
-position = Vector2(346, 289)
+position = Vector2(378, 352)
 
 [node name="Camera2D" type="Camera2D" parent="PelaoCarbon"]
 position = Vector2(1, 8)
-zoom = Vector2(4.605, 4.605)
+zoom = Vector2(1.5, 1.5)
+
+[node name="Pelado_quieto_no_jugable" parent="." instance=ExtResource("3_8a8md")]
+position = Vector2(729, 299)

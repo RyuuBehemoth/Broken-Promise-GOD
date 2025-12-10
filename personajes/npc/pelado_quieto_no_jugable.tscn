@@ -1,0 +1,168 @@
+[gd_scene load_steps=21 format=3 uid="uid://dk26vgs2m6dyd"]
+
+[ext_resource type="Script" uid="uid://cr46344pcc5ih" path="res://personajes/npc/pelado_quieto_no_jugable.gd" id="1_4o73y"]
+[ext_resource type="Texture2D" uid="uid://crl4lufwt3owc" path="res://sprites/Iso Template.png" id="1_5qsse"]
+[ext_resource type="PackedScene" uid="uid://bu03qo276gq7l" path="res://dialogos/dialogo1.tscn" id="3_byn8u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4o73y"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(32, 88, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyhdy"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(0, 88, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h2um"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(64, 88, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ru1e"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(32, 44, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yt1x"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(0, 44, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vc31"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(64, 44, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grdiq"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(32, 132, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b57ae"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(0, 132, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p65kv"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(64, 132, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pd7ub"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bewn"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(0, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3g8ep"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(64, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byn8u"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(32, 0, 32, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvh8l"]
+atlas = ExtResource("1_5qsse")
+region = Rect2(32, 88, 32, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rtas3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4o73y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyhdy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h2um")
+}],
+"loop": true,
+"name": &"caminal_d",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ru1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yt1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1vc31")
+}],
+"loop": true,
+"name": &"caminal_i",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grdiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b57ae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p65kv")
+}],
+"loop": true,
+"name": &"caminal_n",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pd7ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bewn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3g8ep")
+}],
+"loop": true,
+"name": &"caminal_s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byn8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvh8l")
+}],
+"loop": true,
+"name": &"quieto",
+"speed": 0.3
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nk8x5"]
+radius = 9.0
+height = 22.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r6dau"]
+radius = 29.0
+
+[node name="Pelado_quieto_no_jugable" type="CharacterBody2D"]
+script = ExtResource("1_4o73y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.1882353, 0.6627451, 1, 1)
+sprite_frames = SubResource("SpriteFrames_rtas3")
+animation = &"caminal_s"
+frame_progress = 0.04597629
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 2
+position = Vector2(-1, 11)
+shape = SubResource("CapsuleShape2D_nk8x5")
+
+[node name="PelaoNPZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PelaoNPZone"]
+shape = SubResource("CircleShape2D_r6dau")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Dialogo" parent="." instance=ExtResource("3_byn8u")]
+d_file = "<null>"
+
+[connection signal="body_entered" from="PelaoNPZone" to="." method="_on_pelao_np_zone_body_entered"]
+[connection signal="body_exited" from="PelaoNPZone" to="." method="_on_pelao_np_zone_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="dialogue_finished" from="Dialogo" to="." method="_on_dialogo_dialogue_finished"]

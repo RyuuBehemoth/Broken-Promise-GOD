@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cilmio32hl8vr"]
+[gd_scene load_steps=19 format=3 uid="uid://cilmio32hl8vr"]
 
 [ext_resource type="Texture2D" uid="uid://crl4lufwt3owc" path="res://sprites/Iso Template.png" id="1_eu5uo"]
 [ext_resource type="Script" uid="uid://bownvydt2pod1" path="res://personajes/pelao_carbon.gd" id="1_jfyb0"]
@@ -134,20 +134,30 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xaohu"]
-radius = 11.0
-height = 42.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_i6cmc"]
+radius = 8.0
 
-[node name="PelaoCarbon" type="CharacterBody2D" node_paths=PackedStringArray("animation")]
-y_sort_enabled = true
+[sub_resource type="CircleShape2D" id="CircleShape2D_jfyb0"]
+radius = 26.019224
+
+[node name="PelaoCarbon" type="CharacterBody2D" node_paths=PackedStringArray("animation", "area_2d")]
+platform_floor_layers = 4294967055
+platform_wall_layers = 15
 script = ExtResource("1_jfyb0")
 animation = NodePath("AnimatedSprite2D")
+area_2d = NodePath("Area2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hosxq")
 animation = &"quietoparao"
 frame_progress = 0.46387187
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 3)
-shape = SubResource("CapsuleShape2D_xaohu")
+[node name="GrasaPelao" type="CollisionShape2D" parent="."]
+position = Vector2(0, 14)
+shape = SubResource("CircleShape2D_i6cmc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_jfyb0")
+debug_color = Color(0.633588, 0.4003348, 0.8810905, 0.41960785)
